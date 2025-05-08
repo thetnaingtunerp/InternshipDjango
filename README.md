@@ -5,4 +5,5 @@ django-admin startproject mysite
 cd mysite
 python manage.py startapp myapp
 
-helleo
+# Run Server
+python manage.py runserver

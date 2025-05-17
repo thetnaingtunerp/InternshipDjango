@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Hello</h1>
+    
+     {% for i in data %}
+        
+        <a href="{% url 'detail' i.id %}">{{i.title}}</a>
+        <p>{{i.post_body}}</p>
+        <p>{{i.created_date | timesince}} ago</p>
+        <p>{% now "d M Y" %}</p>
+        <a href="#">
+
+            <img src="{{i.photo.url}}" alt="">
+
+        </a>
+        
+
+        
+        <hr>
+     {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<!-- 
+<h1> {{data.title}}</h1>
+<img src="{{data.photo1.url}}" alt="" width="200px">
+<a href="{% url 'deleteblog' data.id %}">DELETE</a> -->
+
+
+<form action="{% url 'blogupdate' data.id %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<label for="">Title</label>
+<input type="text" name="title" id="" value="{{data.title}}">
+<img src="{{data.photo1.url}}" alt="" width="200px">
+<input type="file" name="photo1" id="">
+<button type="submit">Update</button>
+</form>
+
+
+</body>
+</html>

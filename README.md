@@ -13,6 +13,16 @@ python manage.py createsuperuser
 
 # Create Model
 python manage.py makemigrations
+python manage.py migrate
 
-ငါဘာမှ မမှတ်မိတော့ဘူး
-ngar bar hmya 
+
+# Homework
+Create new Blog Project 
+model = (title, body, photo1,photo2, photo3, createdate)
+templates = createblog.html, bloglist.html
+# CSS Design
+
+# Project GitHub
+
+python -m virtualenv venv
+source venv/Script/activate

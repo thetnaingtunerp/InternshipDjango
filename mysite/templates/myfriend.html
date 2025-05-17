@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    {% for i in friends %}
+        {% if i.name == 'my' and i.pass == 'admin' %}
+        <h1>{{i.name}}</h1>
+        {% elif i.name == "UU" %}
+            <a href="#">{{i.name}}</a>
+        {% else %}
+        <h5>{{i.name}}</h5>
+        {% endif %}
+    
+    {% endfor %}
+<hr>
+
+{% for i in my %}
+    <a href="{% url 'posts' %}">{{i}}</a>
+{% endfor %}
+
+It is {% now "D d M Y" %}
+
+</body>
+</html>

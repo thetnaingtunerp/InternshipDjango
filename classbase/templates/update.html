@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>{{ie.task_name}}</h1>
+
+   <form action="" method="post">{% csrf_token %}
+    {{fm}}
+    <button type="submit">Update</button>
+   </form>
+
+<hr>
+
+   <div class="formgrop">
+    <input type="number" name="" id="pid" value="{{ie.id}}">
+    <input type="text" name="" id="taskname" value="{{ie.task_name}}">
+    <input type="number" name="" id="amtid" value="{{ie.amount}}">
+    <input type="text" name="" id="catid" value="{{ie.category}}">
+    <button type="button">ajax btn</button>
+   </div>
+</body>
+</html>

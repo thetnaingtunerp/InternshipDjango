@@ -64,6 +64,8 @@ def blogdetail(request, pk):
 
 def blogupdate(request, pk):
     data = Blog.objects.get(id=pk)
+    name = request.get('')
+    
     fm = BlogModelForm1(request.POST, request.FILES, instance=data)
     if fm.is_valid():
             fm.save()

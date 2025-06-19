@@ -26,3 +26,9 @@ templates = createblog.html, bloglist.html
 
 python -m virtualenv venv
 source venv/Script/activate
+
+
+
+
+/todolist/  #GET
+/

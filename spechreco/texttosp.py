@@ -9,7 +9,7 @@ pygame.mixer.init()
 sound_file = "sound_file.mp3"
 
 # Generate audio from text
-text_to_speech = gTTS(text='‌ကောင်းထက်စံ ဆရာ ကြောက်လား မှန်မှန်ဖြေမှန်မှန်ဖြေ', lang='my')
+text_to_speech = gTTS(text='‌ကောင်းထက်စံ ဘာလို့ နောက်ကျတာလဲ ', lang='my')
 text_to_speech.save(sound_file)
 
 # Load the audio file into Pygame

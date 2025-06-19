@@ -30,19 +30,21 @@ class IncomeExpenseForm(forms.ModelForm):
 
 
 def trackerlist(request):
-    mylist = IncomeExpense.objects.all()
-    fm = IncomeExpenseForm()
-    paginator = Paginator(mylist, 5)
-    page_number = request.GET.get("page")
-    page_obj = paginator.get_page(page_number)
-    if request.method == 'POST':
-        saveform = IncomeExpenseForm(request.POST)
-        if saveform.is_valid():
-            saveform.save()
-            return redirect('/')
-        else:
-            return HttpResponse('Error')
-    return render(request, 'index.html', {'mylist':mylist, 'fm':fm, "page_obj": page_obj})
+    mylist = IncomeExpense.objects.values('task_name', 'amount')
+    print(mylist)
+    labels = []
+    values = []
+    
+    for i in mylist:
+        labels.append(i['task_name'])
+
+    for i in mylist:
+        values.append(i['amount'])
+
+    print(labels)
+    print(values)
+   
+    return render(request, 'index.html', {'mylist':mylist, 'labels':labels, 'values':values})
 
 
 
